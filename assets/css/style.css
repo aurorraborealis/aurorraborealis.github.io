@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+} */
+
+.main-content {
+  display: grid;
+  grid-template-areas: "clock";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+}
+.watch-clock {
+  grid-area: clock;
+}
