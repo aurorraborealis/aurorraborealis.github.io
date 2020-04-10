@@ -1,16 +1,75 @@
 body {
   margin: 0;
   padding: 0;
-} */
+}
+
+@font-face {
+  font-family: 'futrw';
+  src: url('../font/FUTRFW.TTF');
+}
+.fnt-futrw {
+  font-family: 'futrw';
+}
+
+@font-face {
+  font-family: 'cinzel';
+  src: url('../font/Cinzel-Regular.otf');
+}
+.fnt-cinzel {
+  font-family: 'cinzel';
+}
+
+
+/* **************************** */
 
 .main-content {
+  height: 39.7rem;
   display: grid;
-  grid-template-areas: "clock";
-  grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-areas: "top-grid"
+                       "center-grid"
+                       "clock";
+  grid-template-columns: 100%;
+  grid-template-rows: 25% 50% 25%;
   justify-content: center;
   align-content: center;
+  background: linear-gradient(0deg ,rgb(0, 144, 228), rgb(182, 220, 233), rgb(77, 234, 255));
 }
-.watch-clock {
+.main-content .top-grid {
+  grid-area: top-grid;
+  text-align: center;
+}
+.main-content .watch-clock {
   grid-area: clock;
+  text-align: center;
+  display: grid;
+  grid-template-areas: "clock-now date-masehi"
+                       "clock-now date-masehi"
+                       "clock-now date-masehi";
+  grid-template-columns: auto 20%;
+  grid-template-rows: 25% 50% 25%;
+  justify-content: center;
+  align-items: center;
+}
+.main-content .center-grid {
+  grid-area: center-grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vw;
+  color: bisque;
+  text-shadow: rgb(71, 71, 71) 5px 5px 10px ;
+}
+
+
+.clock-show {
+  grid-area: clock-now;
+  font-size: 3vw;
+  color: bisque;
+  text-shadow: rgb(71, 71, 71) 5px 5px 10px ;
+}
+.date-show {
+  grid-area: date-masehi;
+  font-size: 1vw;
+  color: bisque;
+  text-shadow: rgb(71, 71, 71) 2px 2px 4px ;
 }
