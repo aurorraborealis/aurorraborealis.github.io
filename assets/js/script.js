@@ -8,9 +8,12 @@ $(document).ready(function () {
     var month = now.getUTCMonth();
     var day = now.getDate();
     var time = hour + ":" + mins + ":" + sec;
-    var hijri = new Intl.DateTimeFormat('id', { day: 'numeric', month: 'long', weekday: 'long', year: 'numeric' }).format(Date.now());
+    var hijri = new Intl.DateTimeFormat('en-TN-u-ca-islamic', { day: 'numeric', month: 'long', weekday: 'long', year: 'numeric' }).format(Date.now());
+    var masehi = new Intl.DateTimeFormat('en', { day: 'numeric', month: 'long', weekday: 'long', year: 'numeric' }).format(Date.now());
+    
     document.getElementById("watch-clock").innerHTML = time;
-    document.getElementById("date-now").innerHTML = hijri;
+    document.getElementById("date-hijri").innerHTML = hijri;
+    document.getElementById("date-masehi").innerHTML = masehi;
     requestAnimationFrame(clock);
   }
   requestAnimationFrame(clock);
