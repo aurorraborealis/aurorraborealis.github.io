@@ -7,6 +7,7 @@
   <title>Ramadhan Al-Karim</title>
 
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
   <script src="assets/js/jquery.js"></script>
   <script src="assets/js/popper.min.js"></script>
@@ -16,14 +17,21 @@
 </head>
 
 <body>
+  <div id="curtain">
+    <span></span>
+    <span></span>
+    <span></span>
+    <div class="content-sliding"><div class="prayerTimes"></div></div>
+    <div class="toggle" onclick="toggle()"><i class="fas fa-fw fa-grip-lines"></i></div>
+  </div>
 
   <div class="main-content">
     <div class="top-grid"></div>
     <div class="center-grid">
-      <div class="fnt-cinzel text-xl-center">"Selamat Menunaikan Ibadah Puasa"</div>
+      <div class="fnt-cinzel text-xl-center"></div>
     </div>
     <div class="watch-clock fnt-futrw">
-      <div class="clock-show border-right border-light px-3" id="watch-clock"></div>
+      <div class="clock-show border-right border-left border-light px-3" id="watch-clock"></div>
       <div class="date-show" id="date-now">
         <div class="date-hijri border-bottom p-2" id="date-hijri"></div>
         <div class="date-masehi p-2" id="date-masehi"></div>

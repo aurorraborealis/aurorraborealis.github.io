@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   padding: 0;
 }
@@ -22,6 +22,87 @@ body {
 
 /* **************************** */
 
+#curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#curtain span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  display: block;
+  transform-origin: bottom left;
+  transition: 0.5s ease-in-out;
+  transform: rotate(-90deg);
+}
+#curtain span:nth-child(1) {
+  background: rgba(190, 241, 216, 0.281);
+  transform: rotate(-90deg);
+  transition-delay: 0.2s;
+}
+#curtain span:nth-child(2) {
+  background: rgba(135, 208, 250, 0.562);
+  transform: rotate(-90deg);
+  transition-delay: 0.1s;
+}
+#curtain span:nth-child(3) {
+  background: rgba(255, 255, 255);
+  transform: rotate(-90deg);
+  transition-delay: 0s;
+}
+#curtain.active span:nth-child(1) {
+  z-index: 100;
+  transition-delay: 0s;
+}
+#curtain.active span:nth-child(2) {
+  z-index: 102;
+  transition-delay: 0.1s;
+}
+#curtain.active span:nth-child(3) {
+  z-index: 103;
+  transition-delay: 0.2s;
+}
+#curtain.active span {
+  transform: rotate(0deg);
+}
+.toggle {
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  cursor: pointer;
+  transition: 0.5s;
+  color: azure;
+}
+#curtain.active .toggle {
+  color: rgb(43, 43, 43);
+  transform: rotate(-45deg);
+}
+#curtain .content-sliding {
+  position: absolute;
+  z-index: 200;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  transition-delay: 0s;
+}
+#curtain.active .content-sliding {
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.7s;
+}
+
 .main-content {
   height: 39.7rem;
   display: grid;
@@ -42,11 +123,11 @@ body {
   grid-area: clock;
   text-align: center;
   display: grid;
-  grid-template-areas: "clock-now date-today"
-                       "clock-now date-today"
-                       "clock-now date-today";
+  grid-template-areas: "clock-now clock-now"
+                       "clock-now clock-now"
+                       "date-today date-today";
   grid-template-columns: auto 25%;
-  grid-template-rows: 25% 50% 25%;
+  grid-template-rows: 25% 25% 50%;
   justify-content: center;
   align-items: center;
 }
