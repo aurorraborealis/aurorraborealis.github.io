@@ -82,7 +82,7 @@
   height: 50px;
   z-index: 1000;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.8s;
   color: azure;
 }
 #curtain.active .toggle {
