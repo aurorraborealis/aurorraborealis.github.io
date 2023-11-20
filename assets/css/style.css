@@ -42,7 +42,7 @@
   display: block;
   transform-origin: bottom left;
   transition: 0.2s ease-in-out;
-  transform: rotate(-90deg);
+  transform: rotate(-70deg);
 }
 #curtain span:nth-child(1) {
   background: rgba(190, 241, 216, 0.281);
