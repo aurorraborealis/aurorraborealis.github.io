@@ -87,7 +87,7 @@
 }
 #curtain.active .toggle {
   color: rgb(43, 43, 43);
-  transform: rotate(-45deg);
+  transform: rotate(45deg);
 }
 #curtain .content-sliding {
   position: absolute;
